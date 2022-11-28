@@ -29,4 +29,5 @@ def services(request):
 
 
 def contact(request):
+    
     return render(request, 'webpages/contact.html')

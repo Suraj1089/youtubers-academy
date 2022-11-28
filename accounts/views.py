@@ -7,6 +7,20 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+# simple jwt authentication
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.tokens import RefreshToken
+
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import serializers, status
+from rest_framework_simplejwt.views import (
+    TokenBlacklistView,
+    TokenObtainPairView,
+    TokenRefreshView,
+    TokenVerifyView,
+)
+
 
 def login(request):
     if request.method == 'POST':
@@ -64,3 +78,4 @@ def logout_user(request):
 @login_required(login_url='login')
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
+
