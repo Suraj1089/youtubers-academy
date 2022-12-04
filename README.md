@@ -1,8 +1,8 @@
 # tubers
-## Online Creators academy
+github-link - https://github.com/Suraj1089/youtubers-academy
 
 
-##### getting started
+## getting started
 
 
 ## Table of Contents
@@ -19,17 +19,15 @@
 
 ## Description
 
-This is a website for a charity organization. Users can connect with organisation and help each other. This website is made using HTML, CSS, JavaScript, Bootstrap, and Django.It includes features like payment gateway, contact form,recatpha validation and many more.
+This website helps users to hire creators. Also they can perform some tasks like download youtube video,getting details about creator and their videos.It uses youtube APIS and web Scrapping.
 
 ## Features
 
-- Payment Gateway
+- Login With Google
 - Contact Form
 - User Authentication
 - User dashboard
-- Recapcha Validation
 - Responsive Design
-- Blogs
 
 
 ## Installation
@@ -38,23 +36,48 @@ This is a website for a charity organization. Users can connect with organisatio
 ```
 git clone https://github.com/Suraj1089/Heart-Charity.git
 ```
+- Setup Virtual Environment 
+to know more about virtual enviroment in python visit - https://docs.python.org/3/library/venv.html
+```
+    virtualenv env 
+```
+- Activate virtual enviroment
+```
+    cd env/Scripts
+    .\activate
+```
+
 - Install the requirements
 ```
 pip install -r requirements.txt
 ```
+- Setup secrets
+- Create .env file in main project directory and add the following secrets.
+```
+SECRET_KEY=your_project_secrest_key
+DATABASE_NAME='project database name'
+DATABASE_USER='project database user name'
+DATABASE_PASSWORD='project database password'
+```
+- You can add other secrets key also.
+note <p style="color:red;">Take care while adding secrets in .env file their shoud not be space between '=' sign in both sides. </p>
 
 - Database Setup
+visit django project to know about database connectivity in django - https://docs.djangoproject.com/en/4.1/ref/databases/
 ```
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': 'localhost'
     }
 }
 
-Here, you can use any database you want. I have used sqlite3 database.
 
-to know more about database setup, visit https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+Here, you can use any database you want. I have used PostreSQL database.
+
 
 ```
 
@@ -79,8 +102,8 @@ python manage.py runserver
 
 ## Usage
 
-- You can use this website for any charity organization.
-- see detials of the project in the gallery section.
+- You can use this website contact with creators
+- Also you can download youtube short videos,long videos,whole playlist and many more from this website.
 
 ## Contributing
 
@@ -113,32 +136,24 @@ You can clone the repository and make changes to it. It is open for all.
 Home - http://127.0.0.1:8000/
 ```
 
-![image](https://user-images.githubusercontent.com/85509795/205105466-2d1ad458-42b5-4abc-ac17-3287ff221446.png)
-
-```
-Voluteer Form  http://127.0.0.1:8000/
-
-```
-![image](https://user-images.githubusercontent.com/85509795/205106053-54dc1e97-793b-4787-8ad2-9fd976380b62.png)
+![image](https://user-images.githubusercontent.com/85509795/205471938-d09a233b-7532-4e66-ba9f-83076e7c921e.png)
 
 
 ```
-User Registraion http://127.0.0.1:8000/auth/signup/
+Services - http://127.0.0.1:8000/services/
+```
+![image](https://user-images.githubusercontent.com/85509795/205471959-03458f3f-b998-456e-a9de-d992fcc38685.png)
+
+
+
+
 
 ```
-![image](https://user-images.githubusercontent.com/85509795/205106829-4119ac96-1a79-4679-8083-a7bfac0b1ca7.png)
-
+    download youtube video - http://127.0.0.1:8000/youtubedownload
 ```
-User dashboard http://127.0.0.1:8000/auth/dashboard/
-
-```
-![image](https://user-images.githubusercontent.com/85509795/205108489-6ffb3ae8-c5c0-4106-827e-075504df6e40.png)
-
-Images source - https://www.pexels.com/
-
-some creators Photo by Kyle Loftus: https://www.pexels.com/photo/silhouette-of-man-standing-in-front-of-microphone-3379934/
+![image](https://user-images.githubusercontent.com/85509795/205472183-b469a4c8-e921-4558-95bf-9de6f4f9ed6e.png)
 
 
-Photo by Kyle Loftus: https://www.pexels.com/photo/light-love-los-angeles-traveling-3379933/
+https://youtube.com/shorts/PbEnmUFANE0?feature=share
 
-https://www.pexels.com/photo/woman-using-laptop-computer-1181280/
+
