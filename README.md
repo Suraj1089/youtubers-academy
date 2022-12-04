@@ -59,8 +59,7 @@ DATABASE_NAME='project database name'
 DATABASE_USER='project database user name'
 DATABASE_PASSWORD='project database password'
 ```
-- You can add other secrets key also.
-note <p style="color:red;">Take care while adding secrets in .env file their shoud not be space between '=' sign in both sides. </p>
+- You can add other secrets key also. Note- <p style="color:#fcba03;">Take care while adding secrets in .env file their shoud not be space between '=' sign in both sides. </p>
 
 - Database Setup
 visit django project to know about database connectivity in django - https://docs.djangoproject.com/en/4.1/ref/databases/
@@ -147,13 +146,10 @@ Services - http://127.0.0.1:8000/services/
 
 
 
-
 ```
     download youtube video - http://127.0.0.1:8000/youtubedownload
 ```
 ![image](https://user-images.githubusercontent.com/85509795/205472183-b469a4c8-e921-4558-95bf-9de6f4f9ed6e.png)
 
-
-https://youtube.com/shorts/PbEnmUFANE0?feature=share
 
 
