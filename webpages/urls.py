@@ -8,4 +8,7 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('services', views.services, name="services"),
     path('contact', views.contact, name="contact"),
+    path('youtubedownload', views.YoutubeDownload.as_view(), name="youtubeDownload"),
+    path('youtubeVideoDetails', views.youtubeVideoDetails,
+         name="youtubeVideoDetails"),
 ]

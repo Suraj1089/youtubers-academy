@@ -88,7 +88,7 @@ target/
 *.pyc
 __pycache__/
 local_settings.py
-
+test.py 
 .env
 db.sqlite3
 .LSOverride
@@ -96,7 +96,7 @@ db.sqlite3
 # Icon must end with two \r
 Icon
 
-
+test.py
 # Thumbnails
 ._*
 
